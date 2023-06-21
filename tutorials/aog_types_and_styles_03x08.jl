@@ -4,30 +4,20 @@
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 1925c7c0-d7cc-11ed-0f3c-dd98612bbce9
+# ╔═╡ 743309d0-d901-11ed-040c-99a147985b17
 using CSV, DataFrames, AlgebraOfGraphics, CairoMakie
 
-# ╔═╡ 4843dc95-bd41-4bcf-bfa4-7a5a4b14aa6f
+# ╔═╡ 39e2e995-63ac-47c3-9f11-d88636a95efc
 begin
-	candy_filepath = "data//archive//candy.csv"
-	candy_data = CSV.read(candy_filepath, DataFrame)
+	spotify_filepath = "data//archive//spotify.csv"
+	spotify_data = CSV.read(spotify_filepath, DataFrame)
 end;
 
-# ╔═╡ c8670948-b367-457f-ab9a-3d1180cd0830
-draw(data(candy_data) * mapping(:sugarpercent, :winpercent) * visual(Scatter))
+# ╔═╡ 15d660ab-4ed2-46ac-be6f-330c667c4c3e
+spotify_data
 
-# ╔═╡ e456a3f1-a61c-4e80-94a6-816a8e2ad0e7
-draw(data(candy_data) * mapping(:sugarpercent, :winpercent) * (linear() + visual(Scatter)))
-
-# ╔═╡ 017538ca-17f4-443a-b4df-27e6a7f456e9
-draw(data(candy_data) * mapping(:pricepercent, :winpercent, color=:chocolate) * visual(Scatter))
-
-# ╔═╡ d098bb52-49fe-4947-84a1-3ee54fb955f5
-draw(data(candy_data) * mapping(:pricepercent, :winpercent, color=:chocolate) * (linear() + visual(Scatter)),
-legend=(position=:top, titleposition=:left, framevisible=true, padding=5))
-
-# ╔═╡ 3eeaaba0-0af8-49d3-8371-8b650b2fb486
-draw(data(candy_data) * mapping(:chocolate, :winpercent) * visual(Scatter))
+# ╔═╡ 4d2684fd-73e4-407d-88c5-c92449eb1530
+draw(data(spotify_data) * mapping(:Date, (2:6)) * visual(Lines))
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -48,7 +38,7 @@ DataFrames = "~1.5.0"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.9.1"
+julia_version = "1.9.0"
 manifest_format = "2.0"
 project_hash = "dcfd4602c798a5256d7fca9e4bceb2decddeb112"
 
@@ -1279,9 +1269,9 @@ version = "0.6.4"
 
 [[deps.TranscodingStreams]]
 deps = ["Random", "Test"]
-git-tree-sha1 = "94f38103c984f89cf77c402f2a68dbd870f8165f"
+git-tree-sha1 = "0b829474fed270a4b0ab07117dce9b9a2fa7581a"
 uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
-version = "0.9.11"
+version = "0.9.12"
 
 [[deps.TriplotBase]]
 git-tree-sha1 = "4d4ed7f294cda19382ff7de4c137d24d16adc89b"
@@ -1409,7 +1399,7 @@ version = "0.15.1+0"
 [[deps.libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.8.0+0"
+version = "5.7.0+0"
 
 [[deps.libfdk_aac_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1459,12 +1449,9 @@ version = "3.5.0+0"
 """
 
 # ╔═╡ Cell order:
-# ╠═1925c7c0-d7cc-11ed-0f3c-dd98612bbce9
-# ╠═4843dc95-bd41-4bcf-bfa4-7a5a4b14aa6f
-# ╠═c8670948-b367-457f-ab9a-3d1180cd0830
-# ╠═e456a3f1-a61c-4e80-94a6-816a8e2ad0e7
-# ╠═017538ca-17f4-443a-b4df-27e6a7f456e9
-# ╠═d098bb52-49fe-4947-84a1-3ee54fb955f5
-# ╠═3eeaaba0-0af8-49d3-8371-8b650b2fb486
+# ╠═743309d0-d901-11ed-040c-99a147985b17
+# ╠═39e2e995-63ac-47c3-9f11-d88636a95efc
+# ╠═15d660ab-4ed2-46ac-be6f-330c667c4c3e
+# ╠═4d2684fd-73e4-407d-88c5-c92449eb1530
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

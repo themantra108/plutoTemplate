@@ -1,33 +1,26 @@
 ### A Pluto.jl notebook ###
-# v0.19.26
+# v0.19.24
 
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 1925c7c0-d7cc-11ed-0f3c-dd98612bbce9
+# ╔═╡ 852f05d0-d853-11ed-2352-c13623f9f025
 using CSV, DataFrames, AlgebraOfGraphics, CairoMakie
 
-# ╔═╡ 4843dc95-bd41-4bcf-bfa4-7a5a4b14aa6f
+# ╔═╡ 8091d688-a6e9-46e9-b321-4093f9265e1a
 begin
-	candy_filepath = "data//archive//candy.csv"
-	candy_data = CSV.read(candy_filepath, DataFrame)
+	cancer_filepath = "data//archive//cancer.csv"
+	cancer_data = CSV.read(cancer_filepath, DataFrame)
 end;
 
-# ╔═╡ c8670948-b367-457f-ab9a-3d1180cd0830
-draw(data(candy_data) * mapping(:sugarpercent, :winpercent) * visual(Scatter))
+# ╔═╡ e7c3c6a7-7c2d-4984-813b-61a8b21baba0
+first(cancer_data, 5)
 
-# ╔═╡ e456a3f1-a61c-4e80-94a6-816a8e2ad0e7
-draw(data(candy_data) * mapping(:sugarpercent, :winpercent) * (linear() + visual(Scatter)))
+# ╔═╡ d07a2b9f-597b-42a1-b364-a545362a31db
+draw(data(cancer_data) * mapping("Area (mean)", color=:Diagnosis) * histogram(bins=30) * visual(alpha=0.7))
 
-# ╔═╡ 017538ca-17f4-443a-b4df-27e6a7f456e9
-draw(data(candy_data) * mapping(:pricepercent, :winpercent, color=:chocolate) * visual(Scatter))
-
-# ╔═╡ d098bb52-49fe-4947-84a1-3ee54fb955f5
-draw(data(candy_data) * mapping(:pricepercent, :winpercent, color=:chocolate) * (linear() + visual(Scatter)),
-legend=(position=:top, titleposition=:left, framevisible=true, padding=5))
-
-# ╔═╡ 3eeaaba0-0af8-49d3-8371-8b650b2fb486
-draw(data(candy_data) * mapping(:chocolate, :winpercent) * visual(Scatter))
+# ╔═╡ e60b1837-05ac-485f-9e41-f03b97f8a90e
+draw(data(cancer_data) * mapping("Radius (worst)", color=:Diagnosis) * AlgebraOfGraphics.density())
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -48,7 +41,7 @@ DataFrames = "~1.5.0"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.9.1"
+julia_version = "1.9.0-rc2"
 manifest_format = "2.0"
 project_hash = "dcfd4602c798a5256d7fca9e4bceb2decddeb112"
 
@@ -1409,7 +1402,7 @@ version = "0.15.1+0"
 [[deps.libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
-version = "5.8.0+0"
+version = "5.4.0+0"
 
 [[deps.libfdk_aac_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1459,12 +1452,10 @@ version = "3.5.0+0"
 """
 
 # ╔═╡ Cell order:
-# ╠═1925c7c0-d7cc-11ed-0f3c-dd98612bbce9
-# ╠═4843dc95-bd41-4bcf-bfa4-7a5a4b14aa6f
-# ╠═c8670948-b367-457f-ab9a-3d1180cd0830
-# ╠═e456a3f1-a61c-4e80-94a6-816a8e2ad0e7
-# ╠═017538ca-17f4-443a-b4df-27e6a7f456e9
-# ╠═d098bb52-49fe-4947-84a1-3ee54fb955f5
-# ╠═3eeaaba0-0af8-49d3-8371-8b650b2fb486
+# ╠═852f05d0-d853-11ed-2352-c13623f9f025
+# ╠═8091d688-a6e9-46e9-b321-4093f9265e1a
+# ╠═e7c3c6a7-7c2d-4984-813b-61a8b21baba0
+# ╠═d07a2b9f-597b-42a1-b364-a545362a31db
+# ╠═e60b1837-05ac-485f-9e41-f03b97f8a90e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
