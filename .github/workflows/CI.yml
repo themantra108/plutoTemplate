@@ -28,7 +28,7 @@ jobs:
     - name: Build notebooks
       run: julia --project -e 'using Tutorials; build_tutorials()'
       env:
-        JULIA_NUM_THREADS: '2'
+        JULIA_NUM_THREADS: '8'
         DISABLE_CACHE: '${{ github.event.inputs.disableCache }}'
         REPO: '${{ github.repository }}'
 
