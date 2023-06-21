@@ -7,7 +7,7 @@ tags = ["code", "tutorials"]
 
 This is a template repository which can be used to create Julia tutorials websites.
 To use this website as a template, go to
-<https://github.com/rikhuijzer/JuliaTutorialsTemplate>
+<https://github.com/rikhuijzer/plutoTemplate>
 and click on the big "Use this template" button.
 
 Some general information is provided below.
@@ -29,7 +29,7 @@ These steps all run in an automated workflow, so changing a file in your copy of
 
 The following is the short guide, for a more detailled guide, see [Getting started](/getting-started).
 
-- Copy the [template](https://github.com/rikhuijzer/JuliaTutorialsTemplate) by clicking on big "Use this template" button.
+- Copy the [template](https://github.com/rikhuijzer/plutoTemplate) by clicking on big "Use this template" button.
 - Replace the Pluto notebooks (`.jl` files) inside `tutorials` by your own tutorials.
 - Change the menu at `layout/menu.html` to point to the right tutorials.
 - Modify any text however you like, the source code has an MIT license.

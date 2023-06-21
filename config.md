@@ -14,6 +14,6 @@ prepath = "plutoTemplate"
 generate_rss = false
 website_title = "plutoTemplate"
 website_descr = "Example website containing Julia tutorials"
-website_url   = "https://rikhuijzer.github.io/JuliaTutorialsTemplate/"
+website_url   = "https://rikhuijzer.github.io/plutoTemplate/"
 +++
 

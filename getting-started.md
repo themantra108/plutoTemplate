@@ -22,7 +22,7 @@ Instead of manually having to run the tutorial after fixing the typo and upload 
 The CI will automatically re-run any notebooks that it needs to run and update the website.
 
 So, to have your own tutorials and CI and website, a new repository has to be created based on this template.
-To do so, go to <https://github.com/rikhuijzer/JuliaTutorialsTemplate> and click on the big "Use this template" button.
+To do so, go to <https://github.com/rikhuijzer/plutoTemplate> and click on the big "Use this template" button.
 In the new page that opens, give your project a nice name click on "Create repository from template".
 Do not select "Include all branches".
 Next, GitHub will say "Generating your repository" for a few seconds and then you have your new repository 🎉.
@@ -33,7 +33,7 @@ That CI thing mentioned above is called GitHub Actions.
 When clicking on the Actions tab near the top of the page, there should be one workflow run visible.
 It should either be orange, which means running, or green, which means successfully finished.
 If this is the case, then you're ready to go to the next step 🎈.
-Otherwise, enable the GitHub Actions in the repository settings or open an issue at <https://github.com/rikhuijzer/JuliaTutorialsTemplate/issues/new>.
+Otherwise, enable the GitHub Actions in the repository settings or open an issue at <https://github.com/rikhuijzer/plutoTemplate/issues/new>.
 
 ## Enable the website
 
@@ -71,7 +71,7 @@ title = "$title"
 Add these blocks in your website to let Franklin know what the page title should be.
 Also remove the old tutorials while you are in that folder.
 
-Next, search for `JuliaTutorialsTemplate` inside your repository and replace all occurrences of that word by the name of your repository.
+Next, search for `plutoTemplate` inside your repository and replace all occurrences of that word by the name of your repository.
 It is especially important to set the right `prepath` in `config.md` since otherwise the CSS will not work on the website.
 
 Also, go to the menu in `_layout/menu.html` and find the lines containing "menu-header" and "menu-item".
