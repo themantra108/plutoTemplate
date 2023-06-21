@@ -29,7 +29,7 @@ mach = machine(forest, X, y, scitype_check_level=0)
 fit!(mach)
 
 # ╔═╡ d38382c6-eb80-4f88-a203-311d305981e8
-test_data_path = "data\\home-data-for-ml-course\\test.csv"
+test_data_path = "data//home-data-for-ml-course//test.csv"
 
 # ╔═╡ f2301433-8465-499a-a9af-445c358c572c
 test_data = CSV.read(test_data_path, DataFrame)
