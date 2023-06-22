@@ -8,10 +8,10 @@ using InteractiveUtils
 using DataFrames, CSV, MLJ, MLJDecisionTreeInterface
 
 # ╔═╡ 690b29b0-65ba-4059-9b44-dc3f0d51c6e4
-X_full = CSV.read("data\\home-data-for-ml-course\\train.csv", DataFrame);
+X_full = CSV.read("data//home-data-for-ml-course//train.csv", DataFrame);
 
 # ╔═╡ a43d5769-edb3-4a0b-ac12-42e6f799329c
-X_test_full = CSV.read("data\\home-data-for-ml-course\\test.csv", DataFrame);
+X_test_full = CSV.read("data//home-data-for-ml-course//test.csv", DataFrame);
 
 # ╔═╡ 76f316e3-0834-4524-afe3-1c5eab71b979
 y = X_full.SalePrice;
@@ -80,7 +80,7 @@ output = DataFrame("Id" => X_test_full.Id,
                        "SalePrice" => preds_test)
 
 # ╔═╡ d8d8cc96-716d-4467-8642-f3fdb7dfbd99
-CSV.write("data\\home-data-for-ml-course\\submissions_02x01.csv", output)
+CSV.write("data//home-data-for-ml-course//submissions_02x01.csv", output)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
