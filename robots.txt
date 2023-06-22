@@ -1,0 +1,4 @@
+Sitemap: https://rikhuijzer.github.io/plutoTemplate/sitemap.xml
+
+User-agent: *
+Disallow:
